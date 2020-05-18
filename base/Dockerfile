@@ -14,7 +14,7 @@ RUN apt-get update \
         && apt-get clean \
         && rm -rf /var/lib/apt/lists/* \
         && cd /tmp \
-        && wget http://www.multichain.com/download/multichain-${MULTICHAIN_VERSION}.tar.gz \
+        && wget https://www.multichain.com/download/enterprise/multichain-${MULTICHAIN_VERSION}.tar.gz \
         && tar -xvzf multichain-${MULTICHAIN_VERSION}.tar.gz \
         && cd multichain-${MULTICHAIN_VERSION} \
         && mv multichaind multichain-cli multichain-util /usr/local/bin \
