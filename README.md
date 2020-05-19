@@ -147,4 +147,4 @@ To configure your chain, we use environment variables.
 * RPC_USER: multichainrpc
 * RPC_PASSWORD: 79pgKQusiH3VDVpyzsM6e3kRz6gWNctAwgJvymG3iiuz
 * RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
-* MASTERNODE: masternode   # IP address of the master node, or a docker compose link. Don't forget the links section!
+* MASTER_NODE: masternode   # IP address of the master node, or a docker compose link. Don't forget the links section!
