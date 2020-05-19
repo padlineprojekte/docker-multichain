@@ -1,5 +1,6 @@
-FROM kunstmaan/node-multichain
-MAINTAINER Kunstmaan
+ARG MULTICHAIN_VERSION=2.0.6-enterprise-demo
+FROM iteratec/multichain-node:${MULTICHAIN_VERSION}
+LABEL maintainer="nils.kuhn@iteratec.com"
 
 RUN apt-get update \
         && apt-get install -q -y python python-dev python-pip sqlite3 libsqlite3-dev \
