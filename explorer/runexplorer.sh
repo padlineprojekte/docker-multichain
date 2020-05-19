@@ -10,7 +10,12 @@ echo "Sleep for 30 seconds so the slave node has initialised"
 sleep 30
 
 echo "Setup /root/.multichain/$CHAINNAME/multichain.conf"
-echo "rpcport=$RPC_PORT" >> /root/.multichain/$CHAINNAME/multichain.conf
+cat << EOF > /root/.multichain/$CHAINNAME/multichain.conf
+rpcuser=$RPC_USER
+rpcpassword=$RPC_PASSWORD
+rpcallowip=$RPC_ALLOW_IP
+rpcport=$RPC_PORT
+EOF
 
 echo "Setup /root/explorer.conf"
 cat << EOF > /root/explorer.conf
