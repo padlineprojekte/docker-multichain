@@ -11,13 +11,14 @@ rpcpassword=$RPC_PASSWORD
 rpcallowip=$RPC_ALLOW_IP
 rpcport=$RPC_PORT
 EOF
-cp /root/.multichain/multichain.conf /root/.multichain/$CHAINNAME/multichain.conf
 
 echo "Start the chain"
 multichaind -daemon -txindex -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT
 
 echo "Sleep for 30 seconds so the slave node has initialised"
 sleep 30
+
+cp /root/.multichain/multichain.conf /root/.multichain/$CHAINNAME/multichain.conf
 
 echo "Setup /root/explorer.conf"
 cat << EOF > /root/explorer.conf
