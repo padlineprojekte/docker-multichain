@@ -36,4 +36,4 @@ EOF
 
 echo "Run the explorer"
 python -m Mce.abe --config /root/explorer.conf --commit-bytes 100000 --no-serve
-python -m Mce.abe --config /root/explorer.conf
+python -m Mce.abe --config /root/explorer.conf --no-load
