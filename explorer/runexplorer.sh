@@ -18,7 +18,9 @@ multichaind -daemon -txindex -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWO
 echo "Sleep for 30 seconds so the slave node has initialised"
 sleep 30
 
-cp /root/.multichain/multichain.conf /root/.multichain/$CHAINNAME/multichain.conf
+echo "Setup /root/.multichain/$CHAINNAME/multichain.conf"
+echo "rpcport=$RPC_PORT" >> /root/.multichain/$CHAINNAME/multichain.conf
+
 
 echo "Setup /root/explorer.conf"
 cat << EOF > /root/explorer.conf
