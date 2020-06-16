@@ -56,9 +56,11 @@ cat /root/.multichain/$CHAINNAME/params.dat
 cat << EOF > /root/.multichain/$CHAINNAME/multichain.conf
 rpcuser=$RPC_USER
 rpcpassword=$RPC_PASSWORD
-rpcallowip=$RPC_ALLOW_IP
 rpcport=$RPC_PORT
 EOF
+for ip in ${RPC_ALLOW_IP//,/ } ; do
+   echo "rpcallowip=$ip" >> /root/.multichain/$CHAINNAME/multichain.conf
+done
 
 if [ ! -z "$BLOCKNOTIFY_SCRIPT" ]; then
     echo "blocknotify=$BLOCKNOTIFY_SCRIPT %s" >> /root/.multichain/$CHAINNAME/multichain.conf

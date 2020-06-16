@@ -8,9 +8,11 @@ mkdir -p /root/.multichain/
 cat << EOF > /root/.multichain/multichain.conf
 rpcuser=$RPC_USER
 rpcpassword=$RPC_PASSWORD
-rpcallowip=$RPC_ALLOW_IP
 rpcport=$RPC_PORT
 EOF
+for ip in ${RPC_ALLOW_IP//,/ } ; do
+   echo "rpcallowip=$ip" >> /root/.multichain/$CHAINNAME/multichain.conf
+done
 
 echo "Start the chain"
 multichaind -daemon -txindex -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT

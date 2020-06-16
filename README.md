@@ -50,6 +50,17 @@ To configure your chain, we use environment variables.
 * RPC_PASSWORD: 79pgKQusiH3VDVpyzsM6e3kRz6gWNctAwgJvymG3iiuz
 * RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
 
+`RPC_ALLOW_IP` may contain multiple ip addresses/masks/cidr's, separated by a comma. Setting a single ip
+works like this: 
+
+    # will allow RPC from 23.24.25.26 only:
+    -e RPC_ALLOW_IP=23.24.25.26 
+    
+While setting up multiple ip addresses could be done like this:
+
+    # will allow RPC from 23.24.25.26, from 172.16.0.0/12 and from 34.35.36.37/255.255.255.0:
+    -e RPC_ALLOW_IP=23.24.25.26,172.16.0.0/12,34.35.36.37/255.255.255.0  
+
 #### Optional
 
 * PARAM_<something descriptive>='<variable>|<value>' e.g: `PARAM_TARGET_BLOCK_SIZE='target-block-time|15'`
@@ -148,3 +159,14 @@ To configure your chain, we use environment variables.
 * RPC_PASSWORD: 79pgKQusiH3VDVpyzsM6e3kRz6gWNctAwgJvymG3iiuz
 * RPC_ALLOW_IP: 0.0.0.0/0.0.0.0
 * MASTER_NODE: masternode   # IP address of the master node, or a docker compose link. Don't forget the links section!
+
+`RPC_ALLOW_IP` may contain multiple ip addresses/masks/cidr's, separated by a comma. Setting a single ip
+works like this: 
+
+    # will allow RPC from 23.24.25.26 only:
+    -e RPC_ALLOW_IP=23.24.25.26 
+    
+While setting up multiple ip addresses could be done like this:
+
+    # will allow RPC from 23.24.25.26, from 172.16.0.0/12 and from 34.35.36.37/255.255.255.0:
+    -e RPC_ALLOW_IP=23.24.25.26,172.16.0.0/12,34.35.36.37/255.255.255.0
