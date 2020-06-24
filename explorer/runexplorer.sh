@@ -15,7 +15,12 @@ for ip in ${RPC_ALLOW_IP//,/ } ; do
 done
 
 echo "Start the chain"
-multichaind -daemon -txindex -shrinkdebugfilesize $CHAINNAME@$MASTER_NODE:$NETWORK_PORT
+multichaind -daemon -txindex -shrinkdebugfilesize -rpcuser=$RPC_USER -rpcpassword=$RPC_PASSWORD $CHAINNAME@$MASTER_NODE:$NETWORK_PORT
+
+cat << EOF > /root/.multichain/$CHAINNAME/multichain.conf
+rpcuser=$RPC_USER
+rpcpassword=$RPC_PASSWORD
+EOF
 
 echo "Sleep for 30 seconds so the slave node has initialised"
 sleep 30
