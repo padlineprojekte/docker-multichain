@@ -68,4 +68,4 @@ fi
 
 cp /root/.multichain/$CHAINNAME/multichain.conf /root/.multichain/multichain.conf
 
-multichaind -txindex -shrinkdebugfilesize -printtoconsole $CHAINNAME
+multichaind -txindex -shrinkdebugfilesize -printtoconsole -debug=mcapi -debug=mchn -debug=mccoin -debug=mcatxo -debug=mcminer -debug=mcblock $CHAINNAME
