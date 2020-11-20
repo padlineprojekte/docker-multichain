@@ -5,6 +5,11 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV LANG en_US.UTF-8
 ENV LC_ALL C.UTF-8
 
+# Set timezone to CET
+RUN apt-get update && \
+    apt-get -y install tzdata
+RUN cp /usr/share/zoneinfo/CET /etc/localtime
+
 ENV MULTICHAIN_VERSION 2.0.6-enterprise-demo
 
 RUN apt-get update \
