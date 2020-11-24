@@ -7,5 +7,6 @@ COPY ./blocknotify.sh /root/blocknotify.sh
 RUN chmod a+x /root/runchain.sh
 RUN chmod a+x /root/blocknotify.sh
 
+RUN echo "1"
 
 CMD ["/bin/bash", "/root/runchain.sh"]

@@ -19,6 +19,8 @@ RUN cd /root/multichain-explorer-master \
 ADD ./runexplorer.sh /root/runexplorer.sh
 RUN chmod a+x /root/runexplorer.sh
 
+RUN echo "1"
+
 EXPOSE 2750
 
 CMD ["/bin/bash", "/root/runexplorer.sh"]
