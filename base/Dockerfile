@@ -26,4 +26,5 @@ RUN apt-get update \
         && cd /tmp \
         && rm -Rf multichain*
 
+
 CMD ["/bin/bash"]
