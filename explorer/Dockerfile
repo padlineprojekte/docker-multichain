@@ -1,4 +1,4 @@
-ARG MULTICHAIN_VERSION=2.0.6-enterprise-demo
+ARG MULTICHAIN_VERSION=2.1.1-enterprise-demo
 FROM iteratec/multichain-node:${MULTICHAIN_VERSION}
 LABEL maintainer="nils.kuhn@iteratec.com"
 
