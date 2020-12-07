@@ -1,5 +1,5 @@
-ARG MULTICHAIN_VERSION=2.1.1-enterprise-demo
-FROM iteratec/multichain-node:${MULTICHAIN_VERSION}
+ARG NODE_VERSION=1.0.1
+FROM iteratec/multichain-node:${NODE_VERSION}
 LABEL maintainer="nils.kuhn@iteratec.com"
 
 RUN apt-get update \
