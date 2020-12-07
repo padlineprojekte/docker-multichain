@@ -5,6 +5,4 @@ LABEL maintainer="nils.kuhn@iteratec.com"
 ADD ./runchain.sh /root/runchain.sh
 RUN chmod a+x /root/runchain.sh
 
-RUN echo "1"
-
 CMD ["/bin/bash", "/root/runchain.sh"]
