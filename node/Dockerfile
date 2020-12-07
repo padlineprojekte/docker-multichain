@@ -1,5 +1,5 @@
-ARG MULTICHAIN_VERSION=2.1.1-enterprise-demo
-FROM iteratec/multichain-base:${MULTICHAIN_VERSION}
+ARG BASE_VERSION=1.0.0
+FROM iteratec/multichain-base:${BASE_VERSION}
 LABEL maintainer="nils.kuhn@iteratec.com"
 
 ADD ./runchain.sh /root/runchain.sh
