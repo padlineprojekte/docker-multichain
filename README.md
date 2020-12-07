@@ -170,3 +170,21 @@ While setting up multiple ip addresses could be done like this:
 
     # will allow RPC from 23.24.25.26, from 172.16.0.0/12 and from 34.35.36.37/255.255.255.0:
     -e RPC_ALLOW_IP=23.24.25.26,172.16.0.0/12,34.35.36.37/255.255.255.0
+
+### Releasing
+
+Releases are done with automated builds in Docker-Hub. 
+Releasing a new version of a docker image is triggered by pushing git-tags into the repository.
+The 4 different images can be release seperately.
+The git-tags need to match one of the following tags:
+
+git tag -a base-release-v1.0.0 -m "release v1.0.0 of base-image"
+git tag -a node-release-v1.0.0 -m "release v1.0.0 of node-image"
+git tag -a master-release-v1.0.0 -m "release v1.0.0 of master-image"
+git tag -a explorer-release-v1.0.0 -m "release v1.0.0 of explorer-image"
+"v1.0.0" gives the version number of the image.
+
+Pushing the git-tag triggers the building of a new image
+e.g. git push origin base-release-v1.0.0
+
+
