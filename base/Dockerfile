@@ -10,7 +10,7 @@ RUN apt-get update && \
     apt-get -y install tzdata
 RUN cp /usr/share/zoneinfo/CET /etc/localtime
 
-ENV MULTICHAIN_VERSION 2.1.1-enterprise-demo
+ENV MULTICHAIN_VERSION 2.1.1-enterprise
 
 RUN apt-get update \
         && apt-get upgrade -q -y \
