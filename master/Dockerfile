@@ -1,4 +1,4 @@
-ARG BASE_VERSION=1.0.0
+ARG BASE_VERSION=1.1.0
 FROM iteratec/multichain-base:${BASE_VERSION}
 LABEL maintainer="nils.kuhn@iteratec.com"
 
