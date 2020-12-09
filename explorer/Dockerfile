@@ -1,4 +1,4 @@
-ARG NODE_VERSION=1.0.1
+ARG NODE_VERSION=1.1.0
 FROM iteratec/multichain-node:${NODE_VERSION}
 LABEL maintainer="nils.kuhn@iteratec.com"
 
