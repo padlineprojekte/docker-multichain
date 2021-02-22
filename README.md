@@ -175,10 +175,11 @@ While setting up multiple ip addresses could be done like this:
 
 Releases are done with automated builds in Docker-Hub. 
 Releasing a new version of a docker image is triggered by pushing git-tags into the repository.
-The 4 different images can be release seperately.
-The git-tags need to match one of the following tags:
+The 4 different images can be released seperately.
+The git-tags need to match one of the following schemes:
 
 git tag -a base-release-v1.0.0 -m "release v1.0.0 of base-image"
+git tag -a base-release-demo-v1.0.0 -m "release v1.0.0 of base-image with MultiChain-demo version"
 git tag -a node-release-v1.0.0 -m "release v1.0.0 of node-image"
 git tag -a master-release-v1.0.0 -m "release v1.0.0 of master-image"
 git tag -a explorer-release-v1.0.0 -m "release v1.0.0 of explorer-image"
