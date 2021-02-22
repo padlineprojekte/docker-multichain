@@ -13,7 +13,7 @@ services:
             - 7557
             - 8002
         environment:
-            CHAINNAME: MyChain
+            CHAINNAME: DALiMED
             NETWORK_PORT: 7557
             RPC_PORT: 8002
             RPC_USER: multichainrpc
@@ -30,7 +30,7 @@ services:
             - 7557
             - 8002
         environment:
-            CHAINNAME: MyChain
+            CHAINNAME: DALiMED
             NETWORK_PORT: 7557
             RPC_PORT: 8002
             RPC_USER: multichainrpc
@@ -50,7 +50,7 @@ services:
             - 7557
             - 8002
         environment:
-            CHAINNAME: MyChain
+            CHAINNAME: DALiMED
             NETWORK_PORT: 7557
             RPC_PORT: 8002
             RPC_USER: multichainrpc
