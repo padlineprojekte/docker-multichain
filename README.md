@@ -1,8 +1,8 @@
 # docker-multichain
 
-This is the repository for the iteratec/multichain-* docker images.
+This is the repository for the padlineprojekte/multichain-* docker images.
 
-It is a fork of [kunstmaan's repository](https://github.com/Kunstmaan/docker-multichain).
+It is a fork of [itteratec's repository](https://github.com/iteratec/docker-multichain).
 
 Basically we updated the MultiChain binaries to latest v2 as of 2020-05-19. And we are 
 using Enterprise version of MultiChain.
